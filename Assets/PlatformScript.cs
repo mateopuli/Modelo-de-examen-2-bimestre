@@ -12,6 +12,9 @@ public class PlatformScript : MonoBehaviour
     public GameObject prefab1;
     public GameObject prefab2;
 
+    public GameObject BaseIzq;
+    public GameObject BaseDer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +35,16 @@ public class PlatformScript : MonoBehaviour
         if (transform.position.x >= xRightLimit)
         {
             toRight = false;
-            Instantiate(prefab1);
+            GameObject clon;
+            clon = Instantiate(prefab1);
+            clon.transform.position = BaseDer.transform.position + new Vector3(0,1,0);
         }
         else if (transform.position.x <= xLeftLimit)
         {
             toRight = true;
-            Instantiate(prefab2);
+            GameObject clon;
+            clon = Instantiate(prefab2);
+            clon.transform.position = BaseIzq.transform.position + new Vector3(0, 1, 0);
         }
     }
 }

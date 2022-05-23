@@ -219,6 +219,8 @@ MonoBehaviour:
   toRight: 0
   prefab1: {fileID: 8548775783136039269, guid: 1a80c54257d488645b19e9da2f6c2042, type: 3}
   prefab2: {fileID: 2111947615516719548, guid: e9a42d84d07365447bff1309048d970f, type: 3}
+  BaseIzq: {fileID: 753264856}
+  BaseDer: {fileID: 1582184667}
 --- !u!65 &429100409
 BoxCollider:
   m_ObjectHideFlags: 0
