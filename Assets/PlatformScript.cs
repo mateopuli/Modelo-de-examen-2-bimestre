@@ -8,6 +8,8 @@ public class PlatformScript : MonoBehaviour
     public float xRightLimit;
     public float xLeftLimit;
     public bool toRight;
+
+    public GameObject prefab1;
     
     // Start is called before the first frame update
     void Start()
@@ -29,10 +31,12 @@ public class PlatformScript : MonoBehaviour
         if (transform.position.x >= xRightLimit)
         {
             toRight = false;
+            Instantiate(prefab1);
         }
         else if (transform.position.x <= xLeftLimit)
         {
             toRight = true;
+            Instantiate(prefab1);
         }
     }
 }
